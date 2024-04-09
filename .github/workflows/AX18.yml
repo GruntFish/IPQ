@@ -1,9 +1,11 @@
 name: AX18
 
 on:
+  repository_dispatch:
   workflow_dispatch:
-  schedule:
-    - cron: 0 19 * * *
+permissions:
+  contents: write
+  actions: write
 
 env:
   REPO_URL: https://github.com/GruntFish/ipq60xx-6.1
